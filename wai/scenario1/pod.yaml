@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: wai-demo
+  labels:
+    app: wai-demo
+    secure: "enabled"
+spec:
+  containers:
+    - name: wai-demo
+      image: psibi/wai-sample-wai:latest
+      ports:
+        - name: http
+          containerPort: 3000

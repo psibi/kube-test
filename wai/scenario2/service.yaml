@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: "wai-scenario-2"
+spec:
+  selector:
+    app: "wai-frontend"
+  ports:
+    - protocol: "TCP"
+      port: 31000
+      targetPort: 3000
+  type: LoadBalancer

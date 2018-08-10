@@ -1,0 +1,18 @@
+resolver: lts-12.5
+
+packages:
+- .
+
+image:
+  container:
+    name: psibi/wai
+    base: fpco/stack-build
+    
+    entrypoints:
+    - sample-wai
+
+docker:
+  enable: true
+
+# extra-deps: []
+
