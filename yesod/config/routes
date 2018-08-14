@@ -13,3 +13,6 @@
 
 /profile ProfileR GET
 /person PersonR GET POST
+
+/health/liveness LivenessR GET
+/health/readiness ReadinessR GET
