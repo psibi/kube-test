@@ -4,6 +4,7 @@
 {-# LANGUAGE MultiParamTypeClasses #-}
 {-# LANGUAGE TypeFamilies #-}
 {-# LANGUAGE ScopedTypeVariables#-}
+{-# LANGUAGE BangPatterns#-}
 module Handler.Home where
 
 import Import
@@ -83,3 +84,11 @@ getPersonR :: Handler RepJson
 getPersonR = do
   persons :: [Entity Person] <- runDB $ selectList [] []
   return $ repJson $ toJSON persons
+
+getLivenessR :: Handler ()
+getLivenessR = return ()
+
+getReadinessR :: Handler RepJson
+getReadinessR = do
+  person :: [Entity Person] <- runDB $ selectList [] [LimitTo 1]
+  return $ repJson $ toJSON person
