@@ -1,5 +1,0 @@
-postgresUser: postgres
-postgresPassword: fajkfjakjfka
-postgresDatabase: yesod-test
-persistence:
- storageClass: ssd-slow
